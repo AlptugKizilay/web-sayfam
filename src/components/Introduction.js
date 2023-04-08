@@ -7,7 +7,7 @@ const Intorduction = () => {
   const { persData } = useContext(PersonalContext);
 
   return (
-    <div>
+    <div className="h-14 bg-gradient-to-r from-cyan-500 to-blue-500">
       <div>
         <h3>Hi! {/* emoji */}</h3>
         <p>

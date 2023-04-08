@@ -35,7 +35,32 @@ export const Data = () => {
         img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRMczCXPXMZ-8tVEUt2FpT4uJxz7HEXgjBy0_qGSr4NLbAE5Y1C",
       },
     ],
-    links: [],
+    links: [{
+      git:"https://github.com/AlptugKizilay",
+      linkedin:"https://www.linkedin.com/in/alptugkizilay/",
+      blog:"",
+      email:"alptugkizilay@gmail.com",
+    }],
+    projects:[
+      {
+       name:"Task Manager",
+       description:"You can manage your tasks by using Task Manager",
+       url:"http://task-manager-project.great-site.net",
+       git:"https://github.com/AlptugKizilay/fsweb-s9g2-task-yonetimi-2",
+       content:["JavaScript","CSS","HTML"],
+       img1:"https://s3-alpha-sig.figma.com/img/4925/c0fe/0dd6fa4b81a4386c44fc6cd6fffb11d4?Expires=1681689600&Signature=H2vTnE1dvUHpQpHpAZ-c4ioCMt9LYKi5-B1nziHJu~zZk6RcgFbv~d6afubvVCkghynTNcGJOlaABBHvYTjDy3yOXTGPthy~JxxPN~GfLn1s9cWzkjdn16RcqWB5MzzeZTI7yZUP9BYdjfK-Jq25x0CSddts2~tSY6bzSo0~BsudsTZ80eAPRQC7i-BNUxAk8Cz-58UfOFynksN3fVryrb90QbXjcFeAFCkOqjkpvZIbHIDqdMExqyscH5Q3pXemIZmh6cEvn7~m4s7Jfn4EsBRB2OfaPe94n3pEfmH814hinU6zp2VitwP2o9dF-T-IUUxrKLm6wAsVJcTVoXLRXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+       img2:"https://s3-alpha-sig.figma.com/img/600f/f411/f246155782db0594c00c688cdbf27f80?Expires=1681689600&Signature=l1~WDrXQU4Mtw~jDceH1K9MLeUQ5Cb2SeECmfhpvls2O54pcVgfU5ff4IpW6Xo4ZA-s1vdvMyn~TypQ3cEBBkvq4NLYhSG1bCSTR6IcQ6p6IIqV2TsT6gC0g5IQ5Hh~XcDD~~gKKb1LolVCPT8zS~3bvcztnmajUOvwMc4ODZ0XJYKOKuonqCewmCltYtwcXAOWAZQVzpag11tlY29pHUllSU2OyhcLqb36OckIztfMyzRpymsk302fOcY6eUFDZu-idaVbnfSsa9X~sKUzzvbH6jve46xp2nTkhqa14FF4MbIglAWUD22CAlmqjun54-B1YVtG1flPPqlLH15S1uA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+      },
+      {
+        name:"e-Commerce site For Books",
+        description:"You can add books to cart",
+        url:"http://myfirstproject.great-site.net",
+        git:"https://github.com/AlptugKizilay/fsweb-s11g1-shopping-cart",
+        content:["JavaScript","CSS","HTML"],
+        img1:"https://s3-alpha-sig.figma.com/img/4925/c0fe/0dd6fa4b81a4386c44fc6cd6fffb11d4?Expires=1681689600&Signature=H2vTnE1dvUHpQpHpAZ-c4ioCMt9LYKi5-B1nziHJu~zZk6RcgFbv~d6afubvVCkghynTNcGJOlaABBHvYTjDy3yOXTGPthy~JxxPN~GfLn1s9cWzkjdn16RcqWB5MzzeZTI7yZUP9BYdjfK-Jq25x0CSddts2~tSY6bzSo0~BsudsTZ80eAPRQC7i-BNUxAk8Cz-58UfOFynksN3fVryrb90QbXjcFeAFCkOqjkpvZIbHIDqdMExqyscH5Q3pXemIZmh6cEvn7~m4s7Jfn4EsBRB2OfaPe94n3pEfmH814hinU6zp2VitwP2o9dF-T-IUUxrKLm6wAsVJcTVoXLRXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        img2:"https://s3-alpha-sig.figma.com/img/600f/f411/f246155782db0594c00c688cdbf27f80?Expires=1681689600&Signature=l1~WDrXQU4Mtw~jDceH1K9MLeUQ5Cb2SeECmfhpvls2O54pcVgfU5ff4IpW6Xo4ZA-s1vdvMyn~TypQ3cEBBkvq4NLYhSG1bCSTR6IcQ6p6IIqV2TsT6gC0g5IQ5Hh~XcDD~~gKKb1LolVCPT8zS~3bvcztnmajUOvwMc4ODZ0XJYKOKuonqCewmCltYtwcXAOWAZQVzpag11tlY29pHUllSU2OyhcLqb36OckIztfMyzRpymsk302fOcY6eUFDZu-idaVbnfSsa9X~sKUzzvbH6jve46xp2nTkhqa14FF4MbIglAWUD22CAlmqjun54-B1YVtG1flPPqlLH15S1uA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+      }
+    ]
   };
   axios
     .post("https://64306329c26d69edc890f23b.mockapi.io/user", initial)
