@@ -14,7 +14,7 @@ function App() {
   const { persData, setPersData } = useContext(PersonalContext);
   const getData = () => {
     axios
-      .get("https://64306329c26d69edc890f23b.mockapi.io/user/3")
+      .get("https://64306329c26d69edc890f23b.mockapi.io/user/5")
       .then((res) => {
         setPersData(res.data);
         console.log(res.data);

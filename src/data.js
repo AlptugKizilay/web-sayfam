@@ -7,6 +7,7 @@ export const Data = () => {
     surname: "Kızılay",
     birthDate: "17.05.1996",
     city: "İstanbul",
+    mail: "alptugkizilay@gmail.com",
     education: "Bogazici Univercity Primary Mathematics Education - 2021",
     role: "Frontend, UI",
     skills: [
