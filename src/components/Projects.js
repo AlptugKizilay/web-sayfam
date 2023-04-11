@@ -39,9 +39,9 @@ const Projects = () => {
               </nav>
             </div>           
             
-            <div>              
-            <img src={item.img2}></img>
-            <img src={item.img1}></img>
+            <div className="relative m-7w-[500px] h-[287px]">              
+            <img src={item.img1} className="w-[370px] h-[276px] absolute mx-16 mt-1 "></img>
+            <img src={item.img2} className="w-[500px] h-[287px] absolute z-10"></img>
             </div>
           </div>
         );

@@ -9,7 +9,7 @@ const Intorduction = () => {
   const link = persData.links[0];
 
   return (
-    <div className="bg-wild-sand flex-col justify-center mx px-60 h-128 font-inter">
+    <div className="bg-wild-sand flex-col justify-center px-60 h-128 font-inter">
       <div>
         <Header />
       </div>

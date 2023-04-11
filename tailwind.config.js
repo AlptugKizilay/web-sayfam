@@ -9,9 +9,12 @@ module.exports = {
       'wild-sand': '#f4f4f4',
       'pattens-blue':"#ddeefe",
       'pinkki': "#AF0C48",
+      'grayki': "#777777",
+      'white' : "#FFFFFF",
     },
     fontFamily: {
-      inter: ['Inter', 'sans-serif'],
+      inter: ['Inter', 'regular'],
+      playfair: ['Playfair', 'display']
     },
     fontSize: {
       sm: '0.8rem',
@@ -28,13 +31,21 @@ module.exports = {
     extend: {
       height: {
         '128': '46.125rem',
+        '110': '28rem'
       },
       width: {
         '1440': '90rem',
+        '921' : '60rem',
+        '550' : '33rem',
+        '530' : '31.25rem',
+        '430' : '26.5rem'
       },
       margin: {
         '16p': '16,666%',
-      }
+      },
+      padding: {
+        '30r': '30rem',
+      },
     },
   },
   plugins: [require("tw-elements/dist/plugin")],
