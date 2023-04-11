@@ -9,18 +9,19 @@ const Intorduction = () => {
   const link = persData.links[0];
 
   return (
-    <div className="bg-wild-sand flex-col justify-center px-60 h-128 font-inter">
+    <div className="bg-wild-sand flex flex-col justify-center px-60 pb-10 font-inter">
       <div>
         <Header />
       </div>
-      <div className="flex mt-28 ">
+      <div className="flex mt-16 ">
         <div className="flex-col ml-44 mr-20">
           <h3 className="font-normal text-3xl tracking-widest text-start mb-3">
-          Hi! 👋
+            Hi! 👋
           </h3>
           <p className="not-italic font-semibold text-start text-4.5xl mb-12 tracking-widestt ">
             I'm {persData.name}. I'm a full-stack developer. I can craft solid
-            and scalable fronted product.<br/> Let's meet!{" "}
+            and scalable fronted product.
+            <br /> Let's meet!{" "}
           </p>
           <nav className="flex space-x-4 mb-6">
             <a href={link.linkedin}>

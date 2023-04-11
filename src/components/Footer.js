@@ -6,15 +6,15 @@ const Footer = () => {
   const link = persData.links[0];
 
   return (
-    <div>
-      <p>Let’s work together on your next product.</p>
-      <div>
-        <nav>
-          <a href={link.git}>Github</a>
-          <a href={link.blog}>Personal Blog</a>
-          <a href={link.linkedin}>Linkedin</a>
-          <a href={link.email}>Email</a>
-        </nav>
+    <div className="flex  my-48">
+      <div className="w-[28%] ml-[30%]">
+        <p className=" font-inter text-[42px] text-end font-semibold ">Let’s work together on your next product.</p>
+      </div>
+      <div className=" flex flex-col ml-16 font-inter text-[24px] text-start  ">
+        <a href={link.git} className="text-git">Github</a>
+        <a href={link.blog}>Personal Blog</a>
+        <a href={link.linkedin} className=" text-linke" >Linkedin</a>
+        <a href={link.email} className=" text-pinkki " >Email</a>
       </div>
     </div>
   );

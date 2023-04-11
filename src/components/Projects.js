@@ -4,51 +4,47 @@ import { PersonalContext } from "../contexts/PersonalProvider";
 const Projects = () => {
   const { persData } = useContext(PersonalContext);
   return (
-    <div>
-      <h2>Projects</h2>
-      {persData.projects.map((item, index) => {
-        return (
-          <div key={index} className=" border-2">
-            <h2> {item.name} </h2>
-            <p>{item.description}</p>
-            {item.content.map((element, i) => {
-              return (
-                <div key={i}>
-                  <div className="mb-6">
-                    <ul
-                      className="mb-5 flex list-none flex-col flex-wrap pl-0 md:flex-row"
-                      role="tablist"
-                    >
-                      <li className="flex-grow basis-0 text-center">
-                        <a
-                          className="my-2 block rounded bg-neutral-100 px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight
-                               text-neutral-500 data-[te-nav-active]:!bg-primary-100 data-[te-nav-active]:text-primary-700 md:mr-4"
-                        >
-                          {element}
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              );
-            })}
-            <div>
-              <nav>
-                <a href={item.git}>Viem on Github</a>
-                <a href={item.url}>Go to app </a>
-              </nav>
-            </div>           
-            
-            <div className="relative m-7w-[500px] h-[287px]">              
-            <img src={item.img1} className="w-[370px] h-[276px] absolute mx-16 mt-1 "></img>
-            <img src={item.img2} className="w-[500px] h-[287px] absolute z-10"></img>
+    <div className="mb-20">
+      <h2 className="text-4xl tracking-wide font-semibold pt-16 ">Projects</h2>
+      <div className="flex justify-center space-x-16 mt-8">
+        {persData.projects.map((item, index) => {
+          return (
+            <div key={index} className={`w-530 bg-pattens-blue${index} rounded-xl `}>
+              <h2 className="font-playfair text-[29px] font-semibold text-start ml-10 mt-11 mb-5"> {item.name} </h2>
+              <p className=" font-inter text-[16px] font-medium text-start mx-10 mb-6">{item.description}</p>
+              <div className="flex flex-wrap ml-10 w-[300px]">
+                {item.content.map((element, i) => {
+                  return (
+                    <div key={i}>
+                      <div className="mb-6 mx-3 w-20 h-8 bg-white rounded-3xl flex justify-center items-center ml-0  hover:bg-amaranth">
+                        <p className="font-playfair text-[16px]  hover:text-white font-semibold" >{element}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="flex ml-10 mr-16 justify-between font-inter font-semibold text-[20px]  ">
+                
+                  <a href={item.git} className=" hover:text-pinkki">View on Github</a>
+                  <a href={item.url} className=" hover:text-pinkki">Go to app </a>
+                
+              </div>
+
+              <div className="relative m-7w-[500px] h-[287px] mt-20 -mb-12 ">
+                <img
+                  src={item.img1}
+                  className="w-[370px] h-[276px] absolute mx-16 mt-1 "
+                ></img>
+                <img
+                  src={item.img2}
+                  className="w-[500px] h-[287px] absolute z-10"
+                ></img>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };
 export default Projects;
-
-

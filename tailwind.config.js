@@ -7,10 +7,16 @@ module.exports = {
     colors: {
       'amaranth': '#ea2678',
       'wild-sand': '#f4f4f4',
-      'pattens-blue':"#ddeefe",
+      'pattens-blue0':"#ddeefe",
+      'pattens-blue1':"#D9F6F1",
       'pinkki': "#AF0C48",
       'grayki': "#777777",
       'white' : "#FFFFFF",
+      "git": "#1769FF",
+      "linke": "#0077B5",
+
+      
+      
     },
     fontFamily: {
       inter: ['Inter', 'regular'],
@@ -31,7 +37,8 @@ module.exports = {
     extend: {
       height: {
         '128': '46.125rem',
-        '110': '28rem'
+        '110': '28rem',
+        '600': '42rem',
       },
       width: {
         '1440': '90rem',
