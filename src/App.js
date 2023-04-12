@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import { Background, Rectangle, Ellipse } from './styles';
 
 function App() {
   const { persData, setPersData, theme, setTheme } = useContext(PersonalContext);
@@ -36,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <div className="dark:bg-graydi" >
-        
+      <Rectangle />
         <Intorduction />
         <Skills />
         <Profile />

@@ -11,7 +11,7 @@ const Skills = () => {
           return (
             <div key={index} className="flex flex-col justify-center items-center" >
               <img alt={item.skill} src={item.img} className=" w-32 h-32 rounded-md"></img>
-              <h5 className=" text-2xl font-medium text-grayki mt-2 "> {item.skill} </h5>
+              <h5 className=" text-2xl font-medium text-grayki dark:text-grr mt-2 "> {item.skill} </h5>
             </div>
           );
         })}

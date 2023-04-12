@@ -20,7 +20,8 @@ module.exports = {
       "patten0":"#2D3235",
       "patten1": "#495351",
       "carddi" : "#525252",
-      "white" : "#FFFFFF"
+      "white" : "#FFFFFF",
+      "grr" : "#D9D9D9"
 
 
 
