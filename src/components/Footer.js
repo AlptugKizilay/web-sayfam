@@ -6,7 +6,7 @@ const Footer = () => {
   const link = persData.links[0];
 
   return (
-    <div className="flex  my-48">
+    <div className="flex  my-48 dark:text-white">
       <div className="w-[28%] ml-[30%]">
         <p className=" font-inter text-[42px] text-end font-semibold ">Let’s work together on your next product.</p>
       </div>

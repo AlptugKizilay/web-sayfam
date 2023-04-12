@@ -3,6 +3,7 @@ module.exports = {
   content: ["./src/**/*.{html,js}",
   "./src/**/*.{html,js}",
   "./node_modules/tw-elements/dist/js/**/*.js"],
+  darkMode: 'class',
   theme: {
     colors: {
       'amaranth': '#ea2678',
@@ -14,6 +15,14 @@ module.exports = {
       'white' : "#FFFFFF",
       "git": "#1769FF",
       "linke": "#0077B5",
+      "blackdi": "#2A262B",
+      "graydi": "#484148",
+      "patten0":"#2D3235",
+      "patten1": "#495351",
+      "carddi" : "#525252",
+      "white" : "#FFFFFF"
+
+
 
       
       

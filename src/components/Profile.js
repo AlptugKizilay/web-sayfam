@@ -4,12 +4,12 @@ import { PersonalContext } from "../contexts/PersonalProvider";
 const Profile = () => {
   const { persData } = useContext(PersonalContext);
   return (
-    <div className="bg-wild-sand font-inter">
+    <div className="bg-wild-sand font-inter dark:bg-blackdi dark:text-white  ">
       <h2 className=" text-4xl tracking-wide font-semibold pt-16 ">Profile</h2>
       <div className="flex justify-center mt-12  ">
         <div className="w-550 h-96 -ml-24  relative ">
           <div className="w-530 h-80 bg-grayki p-40 absolute m-2 rounded-3xl"></div>
-          <div className="card bg-white w-530 h-80 flex flex-col text-start absolute  z-10 rounded-3xl" >
+          <div className="card bg-white dark:bg-carddi w-530 h-80 flex flex-col text-start absolute  z-10 rounded-3xl" >
             <h4 className=" text-amaranth text-2xl font-playfair mt-9 ml-10">
               Basic Information
             </h4>
