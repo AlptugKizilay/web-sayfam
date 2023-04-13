@@ -3,25 +3,26 @@ import { PersonalContext } from "../contexts/PersonalProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Header from "./Header";
+import { useTranslation } from "react-i18next";
 
-const Intorduction = () => {
+const Intorduction = ({ changeLanguage, language }) => {
   const { persData } = useContext(PersonalContext);
   const link = persData.links[0];
+  const { t } = useTranslation();
 
   return (
     <div className="bg-wild-sand dark:bg-blackdi dark:text-white flex flex-col justify-center px-60 pb-10 font-inter">
       <div>
-        <Header />
+        <Header changeLanguage={changeLanguage} language={language} />
       </div>
       <div className="flex mt-16 ">
         <div className="flex-col ml-44 mr-20">
           <h3 className="font-normal text-3xl tracking-widest text-start mb-3">
-            Hi! 👋
+            {t("greeting")} 👋
           </h3>
           <p className="not-italic font-semibold text-start text-4.5xl mb-12 tracking-widestt ">
-            I'm {persData.name}. I'm a full-stack developer. I can craft solid
-            and scalable fronted product.
-            <br /> Let's meet!{" "}
+            {t("I")} {persData.name}. {t("intro")}
+            <br /> {t("Let's meet!")}{" "}
           </p>
           <nav className="flex space-x-4 mb-6">
             <a href={link.linkedin}>
@@ -33,10 +34,10 @@ const Intorduction = () => {
           </nav>
 
           <p className="not-italic font-medium  text-start text-1.5xl tracking-wider">
-            Currently <span className="text-pinkki">Freelancing</span> for{" "}
-            <span className="text-pinkki">UX, UI & Web Desing</span> Project.
+          {t("Currently")} <span className="text-pinkki">{t("Freelancing")}</span> {t("for")}{" "}
+            <span className="text-pinkki">{t("UX")}</span> {t("Project")}
             <br></br>
-            Invite me to join your team:{" "}
+            {t("invite")}:{" "}
             <a
               href={persData.links[0].email}
               className="text-pinkki underline hover:underline-offset-4"

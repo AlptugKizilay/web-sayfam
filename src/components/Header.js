@@ -1,9 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { PersonalContext } from "../contexts/PersonalProvider";
-import { Background, Rectangle, Ellipse } from "../styles";
 
-const Header = () => {
+import { useTranslation } from 'react-i18next';
+
+
+const Header = ({changeLanguage, language}) => {
   const { theme, setTheme } = useContext(PersonalContext);
+  const { t } = useTranslation();
+  
+  
 
   const changeTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -16,6 +21,8 @@ const Header = () => {
       localStorage.setItem("theme", "light");
     }
   };
+
+  
   useEffect(() => {
     if (
       localStorage.theme === "dark" ||
@@ -31,7 +38,7 @@ const Header = () => {
   useEffect(() => {
     console.log(theme);
     
-  }, [theme]);
+  }, []);
   return (
     <div className=" pt-24 flex justify-end bg-wild-sand dark:bg-blackdi dark:text-white">
       <div className="mx-5">
@@ -51,10 +58,12 @@ const Header = () => {
       </div>
       |
       <div className="font-inter font-semibold text-grayki mx-5">
-        <a>
+        <button onClick={ () => changeLanguage(language==="en" ? "tr" : "en")}>
           {" "}
-          <span className=" text-amaranth">TÜRKÇE’YE</span> GEÇ{" "}
-        </a>
+          <span className=" text-amaranth">{t("language")}</span>
+        </button>
+      
+        
       </div>
     </div>
   );

@@ -1,17 +1,19 @@
 import { useContext } from "react";
 import { PersonalContext } from "../contexts/PersonalProvider";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
   const { persData } = useContext(PersonalContext);
+  const { t } = useTranslation();
   return (
     <div className="mb-20 dark:bg-graydi dark:text-white">
-      <h2 className="text-4xl tracking-wide font-semibold pt-16 ">Projects</h2>
+      <h2 className="text-4xl tracking-wide font-semibold pt-16 ">{t("Projects")}</h2>
       <div className="flex justify-center space-x-16 mt-8">
-        {persData.projects.map((item, index) => {
+        {persData.projects.map((item, index,) => {
           return (
             <div
               key={index}
-              className={`w-530 bg-pattens-blue${index} rounded-xl dark:bg-patten${index} `}
+              className={`w-530 ${(index===0) ? "bg-pattens-blue0 dark:bg-patten0": "bg-pattens-blue1 dark:bg-patten1"} rounded-xl`}
             >
               <h2 className="font-playfair text-[29px] font-semibold text-start ml-10 mt-11 mb-5">
                 {" "}
@@ -33,10 +35,10 @@ const Projects = () => {
               </div>
               <div className="flex ml-10 mr-16 justify-between font-inter font-semibold text-[20px]  ">
                 <a href={item.git} className=" hover:text-pinkki">
-                  View on Github
+                {t("ViewonGithub")}
                 </a>
                 <a href={item.url} className=" hover:text-pinkki">
-                  Go to app{" "}
+                {t("Gotoapp")}
                 </a>
               </div>
 

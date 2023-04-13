@@ -9,11 +9,22 @@ import Skills from "./components/Skills";
 import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import { Background, Rectangle, Ellipse } from './styles';
+import { useTranslation } from "react-i18next";
 
 function App() {
-  const { persData, setPersData, theme, setTheme } = useContext(PersonalContext);
-  
+  const { persData, setPersData } = useContext(PersonalContext);
+  const [language, setLanguage] = useState(localStorage.getItem("language")==="en" ? "en" : "tr" );
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setLanguage(lng);
+    if(lng === "en"){
+      localStorage.setItem("language", "en");
+    }else {     
+      localStorage.setItem("language", "tr");
+    }
+  };
+
   const getData = () => {
     axios
       .get("https://64306329c26d69edc890f23b.mockapi.io/user/6")
@@ -31,14 +42,14 @@ function App() {
   }, []);
   useEffect(() => {
     console.log(persData);
-  }, [persData]);
+    
+    i18n.changeLanguage(language);
+  }, []);
 
-  
   return (
     <div className="App">
-      <div className="dark:bg-graydi" >
-      <Rectangle />
-        <Intorduction />
+      <div className="dark:bg-graydi">
+        <Intorduction changeLanguage={changeLanguage} language={language} />
         <Skills />
         <Profile />
         <Projects />

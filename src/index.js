@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import PersonalProvider from "./contexts/PersonalProvider";
 import { BrowserRouter } from "react-router-dom";
 import * as te from 'tw-elements';
+import './i18next'
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

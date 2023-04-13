@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { PersonalContext } from "../contexts/PersonalProvider";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
   const { persData } = useContext(PersonalContext);
+  const { t } = useTranslation();
   return (
     <div className="font-inter h-110 dark:bg-graydi dark:text-white">
-      <h2 className=" text-4xl tracking-wide font-semibold mt-16 " >Skills</h2>
+      <h2 className=" text-4xl tracking-wide font-semibold mt-16 " >{t("Skills")}</h2>
       <div className=" flex justify-center space-x-6 mt-16 ">
         {persData.skills.map((item, index) => {
           return (
