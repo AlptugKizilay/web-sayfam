@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { PersonalContext } from "../contexts/PersonalProvider";
 import { useTranslation } from "react-i18next";
+import imgPc from "../assets/pc.png"
 
 const Projects = () => {
   const { persData } = useContext(PersonalContext);
   const { t } = useTranslation();
   return (
-    <div className="mb-20 dark:bg-graydi dark:text-white">
+    <div className="mb-20 dark:bg-graydi dark:text-white ">
       <h2 className="text-4xl tracking-wide font-semibold pt-16 ">{t("Projects")}</h2>
       <div className="flex justify-center space-x-16 mt-8">
         {persData.projects.map((item, index,) => {
@@ -44,11 +45,12 @@ const Projects = () => {
 
               <div className="relative m-7w-[500px] h-[287px] mt-20 -mb-12 ">
                 <img
-                  src={item.img1}
+                  src={require(`../assets/photo-${index+1}.png`)}
                   className="w-[370px] h-[276px] absolute mx-16 mt-1 "
                 ></img>
                 <img
-                  src={item.img2}
+                  src={require(`../assets/pc.png`)}
+                  alt="pc"
                   className="w-[500px] h-[287px] absolute z-10"
                 ></img>
               </div>

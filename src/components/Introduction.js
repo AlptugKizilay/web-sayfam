@@ -34,7 +34,8 @@ const Intorduction = ({ changeLanguage, language }) => {
           </nav>
 
           <p className="not-italic font-medium  text-start text-1.5xl tracking-wider">
-          {t("Currently")} <span className="text-pinkki">{t("Freelancing")}</span> {t("for")}{" "}
+            {t("Currently")}{" "}
+            <span className="text-pinkki">{t("Freelancing")}</span> {t("for")}{" "}
             <span className="text-pinkki">{t("UX")}</span> {t("Project")}
             <br></br>
             {t("invite")}:{" "}

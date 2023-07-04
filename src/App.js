@@ -15,6 +15,7 @@ function App() {
   const { persData, setPersData } = useContext(PersonalContext);
   const [language, setLanguage] = useState(localStorage.getItem("language")==="en" ? "en" : "tr" );
   const { t, i18n } = useTranslation();
+  
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setLanguage(lng);
@@ -27,7 +28,7 @@ function App() {
 
   const getData = () => {
     axios
-      .get("https://64306329c26d69edc890f23b.mockapi.io/user/6")
+      .get("https://64306329c26d69edc890f23b.mockapi.io/user/7")
       .then((res) => {
         setPersData(res.data);
         console.log(res.data);
@@ -36,13 +37,14 @@ function App() {
         console.log(err);
       });
   };
+
   useEffect(() => {
     getData();
-    /* Data(); */
+    //Data();
   }, []);
+
   useEffect(() => {
-    console.log(persData);
-    
+    console.log(persData);    
     i18n.changeLanguage(language);
   }, []);
 

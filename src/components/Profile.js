@@ -37,13 +37,13 @@ const Profile = () => {
           <h4 className="text-2xl font-playfair font-[500] mt-10 ">{t("about")}</h4>
           <div className=" font-inter font-medium  ">
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
-            aut, odit laborum aliquam voluptatum nisi mollitia.
+          I am a Junior Fullstack Software Developer who initially started my career in the education sector as a mathematics teacher. 
+          As someone who enjoys self-improvement, I developed an interest in the field of software development.
+          
           </p>
           <br />
           <p>
-            Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod
-            deserunt quam temporibus cumque magnam!{" "}
+          I am highly motivated in my work and committed to continuous growth in the field of software development{" "}
           </p>
 
           </div>
