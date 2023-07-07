@@ -8,7 +8,7 @@ const Profile = () => {
   return (
     <div className="bg-wild-sand font-inter dark:bg-blackdi dark:text-white  ">
       <h2 className=" text-3xl lg:text-4xl tracking-wide font-semibold pt-4 lg:pt-16 ">{t("Profile")}</h2>
-      <div className="flex flex-col lg:flex-row justify-center mt-12  ">
+      <div className="flex flex-wrap lg:flex-row justify-center mt-12  ">
         <div className="w-225 h-80 pb-2  lg:w-550 lg:h-96 lg:-ml-24  relative ">
           <div className="w-225 h-80  lg:w-530 lg:h-80 bg-grayki p-40 absolute m-2 rounded-3xl"></div>
           <div className="w-215 h-80 lg:w-530 lg:h-80 card bg-white dark:bg-carddi flex flex-col text-start absolute  z-10 rounded-3xl" >
@@ -33,7 +33,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div className="about w-80 lg:w-430 text-start flex flex-col lg:space-y-4 ml-8 pb-8">
+        <div className="about w-80 lg:w-430 text-start flex flex-col lg:space-y-4 lg:ml-8 pb-8">
           <h4 className="text-2xl font-playfair font-[500] mt-10 ">{t("about")}</h4>
           <div className=" font-inter font-medium">
           <p className="not-italic font-normal lg:font-medium text-start text-base lg:text-1.5xl tracking-tight  lg:tracking-wider">
