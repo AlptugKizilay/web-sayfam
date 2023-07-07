@@ -6,7 +6,7 @@ const Skills = () => {
   const { persData } = useContext(PersonalContext);
   const { t } = useTranslation();
   return (
-    <div className="font-inter h-110 dark:bg-graydi dark:text-white">
+    <div className="font-inter dark:bg-graydi dark:text-white">
       <h2 className=" text-3xl lg:text-4xl tracking-wide font-semibold mt-4 lg:mt-16 " >{t("Skills")}</h2>
       <div className=" flex justify-center flex-wrap  mt-4 lg:mt-16 ">
         {persData.skills.map((item, index) => {
